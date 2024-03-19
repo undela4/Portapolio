@@ -1,0 +1,314 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Analog clock</title>
+        <style>
+            body{
+                padding-top: 0%;
+                background: rgb(0,36,23);
+                background: radial-gradient(circle, rgba(0,36,23,1) 0%, rgba(119,12,111,1) 0%, rgba(121,9,109,1) 0%, rgba(0,212,255,0.9837184873949579) 50%);             
+               
+            }
+            
+            .clock{
+                width: 250px;
+                height: 250px;
+                display:flex;
+                margin-top: 10%;               
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(-1px);
+                box-shadow: 0px 10px 20px 2px rgba(228, 19, 162, 0.7);
+                filter: drop-shadow(2px 4px 6px rgba(2, 2, 2, 0.779));
+                background-color: rgba(183, 179, 179, 0.2);
+
+            }
+            
+            .sw{
+                width: 300px;
+                height: 100px;
+                margin-left:10%;
+                margin-right: 5%;
+                color:rgb(98, 94, 94);
+                float: right;
+                
+                
+            }
+            
+            .sw p{
+                font-size: 60px;
+                padding-left: 8%;
+              
+            } 
+            .sw  button{
+                width: 60px;
+                height: 30px;
+                border-radius:8px;
+                text-align: center;
+
+
+            }
+            .clock span{
+                position: absolute;
+                transform: rotate(calc(30deg* var(--i)));
+                transform: rotate(calc(30deg* var(--)));
+                inset: 15px;
+                font-style: bold;
+                font-size:20px;
+                color: white;
+                align-items: center;
+
+            }
+            .clock1 span{
+                position: absolute;
+                transform: rotate(calc(30deg* var(--i)));
+                transform: rotate(calc(30deg* var(--i)));
+                inset: 15px;
+                font-style: bold;
+                font-size:20px;
+                color: white;
+                align-items: center;
+
+            }
+            
+            .n {
+               position: absolute;
+                justify-content: center;
+                display:flex;
+                align-items: flex-end;
+        
+
+            }
+            .div{
+                    padding-top: 20%;
+                
+            }
+           
+            
+            .n i{
+                position: absolute;
+                width: var(--w);
+                height:var(--h);
+                background-color:var(--clr);
+                border-radius: 5px;
+                align-items: center;
+                justify-content: center;
+
+
+
+            }
+           
+            .p{
+                padding-top: 50%;
+                padding-left: 5%;
+                font-size: 25px;
+                color:white;
+            }
+            .sw input{
+                width: 25%;
+                height: 40%;
+                border-radius: 10px;
+                font-size: 45px;
+                text-align: center;
+                background-color: blanchedalmond;
+                
+            }
+            #myA{
+                float: right;
+                display:none;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body >
+        <a href="index.html"><button class="bnt bg-info"><b>BACK</b></button></a>
+ 
+        <script>
+           
+
+            function fun1(){
+                
+                let s=document.getElementsByClassName('s')[0];
+                let m=document.getElementsByClassName('m')[0];
+                let h=document.getElementsByClassName('h')[0];
+                let d=new Date();
+                let hh=d.getHours();
+                if(hh>12){
+                    hh=hh-12;
+                }
+                let mm =d.getMinutes();
+                let ss=d.getSeconds();
+                document.getElementById('time').innerHTML=hh+":"+mm+":"+ss;
+                h.style.transform=`rotate(${30* hh+mm/2}deg)`;
+                m.style.transform=`rotate(${6*mm}deg)`;
+                s.style.transform=`rotate(${6*ss}deg)`;
+
+                  
+
+            }
+            setInterval(fun1 ,1000);
+            var ms=0,se=0,mi=0;
+            function time(){
+                    
+                    document.getElementById('cm').innerHTML=mi+":"+se+":"+ms;
+                        ms+=1;
+                        if(ms===99){
+                            ms=0;
+                            se+=1;
+                            if(se===59){
+                                se=0;
+                                mi+=1;
+                            }
+                        }
+            }
+            var tt;
+            function s(){
+
+                tt=setInterval(time,10);
+
+
+            }
+            function stop(){
+                clearInterval(tt);
+                clearInterval(tt);
+
+                document.getElementById('cm').innerHTML=mi+":"+se+":"+ms;
+
+            }
+            function rest(){
+                clearInterval(tt);
+                clearInterval(tt);
+
+                ms=0;se=0,mi=0;
+                document.getElementById('cm').innerHTML="00:00:00";
+                
+            }
+             var m,u,r,mn,a;
+            function s2(){
+                 m=document.getElementById('a1').value;
+                 u=document.getElementById('a2').value;
+                 r=document.getElementById('a3').value;
+                 if(r==0 && u==0 && m==0)
+                 {
+                    
+                    var aa=new Audio('Timerup.mp3');
+                    aa.play();
+                    setTimeout(pm=>alert("Please set Timer"),100);
+                    
+                    clearInterval(mn);
+
+                }
+                else{
+                    a=new Audio('Timer.mp3');
+                    a.play();
+                 mn=setInterval(s1,1000);
+                }
+                
+            }
+
+            function s1(){
+                document.getElementById('a1').value=m;
+                document.getElementById('a2').value=u;
+                document.getElementById('a3').value=r;
+                
+                
+               if(r!=0){
+                    r-=1;
+                document.getElementById('a3').value=r;
+                }
+                else{
+                    if(u!=0){
+                        u-=1;
+                        r=59;
+                    }
+                    else{
+                        if(m!=0){
+                            m-=1;
+                            u=59;
+                            r=59;
+
+                        }
+                        else{
+                            clearInterval(mn);
+                            a.pause();
+                            var v=new Audio('Timerup.mp3');
+                            v.play();
+                            setTimeout(pm=>{if(confirm("Time's Up")==true){ v.pause();}else{ v.pause(); }},1000);
+                               
+                        
+                                
+                       
+                               
+                                
+                        }
+                    }
+                }
+                  
+                
+            }
+           function ss(){
+                clearInterval(mn);
+           }
+
+       
+
+        </script>
+        
+        <div>
+        <a class="image-link" href="murali.jpg" style="font-size:20px;">Developer!!</a>
+        <audio id="myA" controls autoplay >
+            <source src="clock.mp3" type="audio/ogg">
+          </audio>
+        </div>
+        <center>
+        <div class="clock">
+            <div  style="--clr:rgb(186, 226, 65);--h:40px;--w:5px;"   class="n h"><i></i></div>
+            <div  style="--clr:rgba(8, 243, 200, 0.94);--h:60px;--w:4px;" class="n m"><i></i></div>
+            <div  style="--clr:black;--h:80px;--w:3px;" class="n s"><i></i></div>
+            <span style="--i:1;">1</span>
+            <span style="--i:2;">2</span>
+            <span style="--i:3;">3</span>
+            <span style="--i:4;">4</span>
+            <span style="--i:5;">5</span>
+            <span style="--i:6;">6</span>
+            <span style="--i:7;">7</span>
+            <span style="--i:8;">8</span>
+            <span style="--i:9;">9</span>
+            <span style="--i:10;">10</span>
+            <span style="--i:11;">11</span>
+            <span style="--i:12;">12</span>
+            <div class="p"> 
+                <p id="time">00:00:00</p>
+            
+            </div>
+
+        </center>
+
+        </div>
+      
+        <div class="sw">
+            <h1 style="margin-left:40px;font-family:'Times New Roman', Times, serif;color:black;font-size:40px;">Stopwatch</h1>
+            <p id="cm">00:00:00</p>
+            <button ondblclick="s()" style="background-color:rgb(0, 255, 47);">START</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="stop()" style="background-color:rgb(222, 58, 58);">Stop</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="rest()" style="background-color:rgb(223, 246, 19);">rest</button>
+
+        </div>
+        <div class="sw" style="float:left;margin-bottom:20%;margin-left:5%;padding-top:0px;">
+            <h1 style="margin-left:30%;font-family:'Times New Roman', Times, serif;color:black;font-size:40px;">Timer</h1>
+
+            <p id="cm"><input id="a1" type="text" value="0">:
+                <input id="a2" type="text" value="0">:
+                <input id="a3" type="text" value="0">
+                </p>
+            <button onclick="s2()" ondblclick="ss()" style="background-color:rgb(0, 255, 47);font-size:40px;margin-left:40%;border-radius:50%;text-align:center;padding-top:0px; width:60px;height:60px;">S</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+           
+
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+    <head>
+    </head>
+    <link rel="stylesheet" href="m.css">
+
+        <title>Animations</title>
+        <style>
+            
+            body{
+                margin: 0px auto;
+                padding: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 50px solid black;
+
+            }
+            .u{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .animi{
+                width: var(--h);
+                height: var(--w);
+                background-color:var(--clr);
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                animation-duration:4s;
+                animation-direction: alternate-reverse;
+                animation-iteration-count:infinite;
+
+            }
+          
+            div{
+                animation-name:undela;
+       
+            }
+            .aaa{
+                animation-name:s;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes s {
+                0%{
+                    margin-top: 18px;
+                    margin-left:-175px;
+
+                };
+                100%{
+                    margin-top: 18px;
+                    margin-left:-175px;
+                }
+            }
+           
+            @keyframes undela {
+                0%{
+
+                }
+                50%{
+                    transform: rotate(45deg);
+                }
+                75%{
+                    transform: rotate(90deg);
+                }
+                100%{
+                    transform: rotate(135deg);
+                }
+                125%{
+                    transform: rotate(180deg);
+                    }
+            }
+        </style>
+       
+    </head>
+    <body>
+        <div class="u">
+            <div style="--clr:rgb(228, 23, 23);--h:300px;--w:300px;" class="animi a1">
+            <div style="--clr:rgb(35, 238, 62);--h:250px;--w:250px;" class="animi a2">
+            <div style="--clr:rgb(138, 128, 128);--h:200px;--w:200px;" class="animi a3">
+            <div style="--clr:rgb(111, 123, 235);--h:150px;--w:150px;" class="animi a4">
+            <div style="--clr:rgb(179, 217, 54);--h:100px;--w:100px;" class="animi a5">
+            
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <section style="--clr:red;--h:50px;--w:50px;" class="aaa">
+            </section>
+            </div>
+    </body>
+</html>

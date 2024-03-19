@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: aqua;
+                padding-top: 40px;
+                padding-left: 500px;
+                background-image: url('https://wallpaperaccess.com/full/1155015.jpg');
+            }
+
+            .a{
+                width: 400px;
+                height: 500px;
+                border: 2px solid black;
+                margin: 20px;
+                left:50%;
+                background-color: bisque;
+                border-radius: 20px;
+              
+            }
+            .a h1{
+                text-align: center;
+            }
+            
+
+            
+            .b{
+                
+                padding-left: 60px;
+
+    
+            }
+            .b input{
+                width: 300px;
+                height: 50px;
+                border-radius: 8px;
+               
+
+            }
+            
+           .a img{
+                width: 150px;
+                height: 120px;
+                padding-top: 10px;
+                padding-left: 120px;
+                border-radius: 10px;
+                
+            }
+            .sub{
+                padding-left: 105px;
+            
+            }
+            .sub1{
+                padding-left: 70px;
+            }
+            .sub input{
+                
+                width:80px;
+                height: 30px;
+                
+            
+                
+            }
+            .sub1 input{
+                width:150px;
+                height: 30px;
+               
+
+            }
+            .imp{
+                padding-left: 100px;
+                height: 200px;
+                width: 280px;
+            }
+            .nc{
+                color:orange;
+                text-align: center;
+                padding-left: 200px;
+            }
+         
+        </style>
+    </head>
+    <body> 
+            <script>
+
+            var arp=[
+            
+                { un:"murali",
+                  ps:"8688569070"
+                },
+                  { un:"21551A061",
+                    ps:"A21551A061"
+                },
+                { un:"21551A063",
+                    ps:"A21551A063"
+                 },
+                 { un:"21551A057",
+                    ps:"A21551A057"
+                 },
+                 { un:"21551A092",
+                    ps:"A21551A092"
+                 },
+                 { un:"21551A05D6",
+                    ps:"A21551A05D6"
+                 }
+                ];
+               
+ function murali(){
+             
+    var x=document.getElementById('u').value;
+    var y=document.getElementById('p').value;
+    var i=0;
+    while(i<arp.length)
+    {
+         console.log(arp[i].un);
+         console.log(arp[i].ps);
+        if(x==arp[i].un && y==arp[i].ps)
+        {
+        alert("login successful");
+        window.open("mobile.html");
+        break;
+
+        }
+        i++;
+    
+    }
+    if(i>=arp.length){
+        alert("Incorrect password \n check userid or password");
+        document.getElementById('u').value="";
+        document.getElementById('p').value="";
+    }
+   
+
+} 
+
+function murali1(){
+    //readed from input box;
+    var x1=document.getElementById('u').value;
+    var y1=document.getElementById('p').value;
+
+    var x=localStorage.getItem("user");
+    var y=localStorage.getItem("pass"); 
+    var j=0;
+     while(j<localStorage.length){
+     if(x==x1 && y==y1){
+        alert("login successful");
+        window.open("mobile.html");
+        break;
+        }
+    j++;
+}
+    if(j>=localStorage.length){
+        
+        alert("Incorrect password \n check userid or password");
+        document.getElementById('u').value="";
+        document.getElementById('p').value="";
+    
+    
+    }
+
+
+ }
+ function murali2(){
+    var u=document.getElementById('u').value;
+    var p=document.getElementById('p').value;
+    arp.push({un:u,ps:p});
+    
+
+ }   
+ 
+               
+            
+    </script>
+
+        <div class="a">
+        <img src="https://img.freepik.com/free-vector/gradient-mobile-store-logo-design_23-2149697771.jpg?w=2000" height:"90px" width:"100px">
+       <cenetr><h1>Login</h1></cenetr> 
+        <form class="b">
+                
+                <input type="text" class="b1" placeholder="User Id/Mobile no" value=""  id="u"><br>
+            <br>
+            <br>
+                <input type="password" placeholder="Enter password" value="" id="p">
+                <br>
+                <br>
+                <div class="sub">
+                    <input type="button" value="SUBMIT" onclick="murali()"  ><br>
+                    <br>  
+                </div>
+                <div class="sub1">
+                    <input type="button" value="Register" onclick="murali2()"   ><br>
+
+                </div> <center>
+                <a href="rea.html"  class="nc" >New custumer </a></center>
+                
+                
+        </form> 
+        </div>
+    </body>
+</html>

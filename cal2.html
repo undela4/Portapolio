@@ -1,0 +1,142 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+        body{
+            padding-top: 60px;
+         background-image: url('https://img.freepik.com/free-photo/beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.jpg?w=2000');
+
+        }  
+       
+        .br{
+            width: 400px;
+            height: 450px;
+            border: 2px solid black;
+            border-radius: 20px;
+            justify-content: center;
+            padding-top: 30px;
+            backdrop-filter: blur(-1px);
+            filter: drop-shadow(2px 4px 6px rgba(2, 2, 2, 0.779));
+            background-color: rgba(183, 179, 179, 0.5);
+            box-shadow: 0 4px 8px 0px black;
+        }
+        
+        .a{
+            padding-top:20px;
+            padding-left: 20px;
+            padding-right: 30px;
+             
+        }
+        .a input:hover{
+            transform: translateY(-1px);
+            box-shadow: 0px 10px 20px 2px rgba(0,255,255,0.7);
+        }
+        .a input{
+            width: 50px;
+            height: 45px;
+            margin-left: 15px;
+            box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
+            1px 2px 4px 0px rgba(0,255,255,0.7),
+            2px 4px 8px 0px rgba(0,255,255,0.7),
+            2px 4px 16px 0px rgba(0,255,255,0.7);
+            background: #000;
+            color: white;
+            border-radius: 10px;
+            font-size: 25px;
+         
+     
+        }
+        
+    </style> 
+    <body>
+        <script >
+
+           function fun(s)
+            {
+             try{
+                document.getElementById('mp').value=eval(mp.value);
+
+             }   
+             catch(err){
+                //document.getElementById('mp').value="Syntax Error";
+                alert("Syntax Error");
+             }
+                var e=document.getElementById('mp');
+                window.addEventListener("onkeyup",fun2);
+
+
+            }
+            function fun2(){
+                var v=document.getElementById('mp').value;
+                if(v.length==0){
+                    document.getElementById('pm').value='';
+                }
+                else{
+                    document.getElementById('pm').value='='+mp.value.slice(0,pm.value.length-1);
+
+                }
+            }
+
+        </script>
+        <center>
+            <!--
+            <a target="new" href="https://mrcet.com/downloads/digital_notes/IT/R18A1201%20COA.pdf" download="">
+            <button  >Download</button>
+            -->
+
+        </a>
+
+        <div class="br">
+            <div>
+            <input type="text" id="pm"  style="width:260px; height:40px;border:2px solid rgb(101, 236, 94); font-size:20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" placeholder="Pre Cal">
+                <input type="text" id="mp"  style="width:260px; height:40px;border:2px solid red; font-size:20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" placeholder="Enter">
+                
+            </div>
+            <div>
+
+            </div>
+            <div class="a">
+                <input type="button" onclick="document.getElementById('mp').value='' " value="AC" style="color:orange" onmouseup="document.getElementById('pm').value=''" >
+                <input type="button" onmousedown="document.getElementById('mp').value=mp.value.slice(0,mp.value.length-1)" value="C" style="color:orange;" onclick="fun2()">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'%'" value="%" style="color:orange;" onmouseup="document.getElementById('pm').value='='+eval(mp.value)" >
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'/'" value="/" style="color:orange;" onmouseup="document.getElementById('pm').value='='+eval(mp.value)">
+
+            </div>
+
+            <div class="a">
+                <input type="button"   onclick="document.getElementById('mp').value=mp.value+'1'" value="1" onmousedown="document.getElementById('pm').value='='+eval(mp.value+'1')">
+                <input type="button"   onclick="document.getElementById('mp').value=mp.value+'2'" value="2" onmouseup="document.getElementById('pm').value='='+eval(mp.value+'2')">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'3'" value="3" onmouseup="document.getElementById('pm').value='='+eval(mp.value+'3')">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'+'" value="+" style="color:orange;"  onmouseup="document.getElementById('pm').value='='+eval(mp.value)">
+
+            </div>
+            <div class="a">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'4'"value="4" onmouseup="document.getElementById('pm').value='='+eval(mp.value+'4')">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'5'" value="5" onmouseup="document.getElementById('pm').value='='+eval(mp.value+'5')">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'6'" value="6" onmouseup="document.getElementById('pm').value='='+eval(mp.value+'6')">
+                <input type="button"   onclick="document.getElementById('mp').value=mp.value+'-'"value="-" style="color:orange;"  onmouseup="document.getElementById('pm').value='='+eval(mp.value)">
+
+            </div>
+            <div class="a">
+                <input type="button"   onclick="document.getElementById('mp').value=mp.value+'7'"value="7"onmouseup="document.getElementById('pm').value='='+eval(mp.value+'7')" >
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'8'" value="8" onmouseup="document.getElementById('pm').value='='+eval(mp.value+'8')">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'9'" value="9"onmouseup="document.getElementById('pm').value='='+eval(mp.value+'9')">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'*'" value="x" style="color:orange; " onmouseup="document.getElementById('pm').value='='+eval(mp.value)">
+
+            </div>
+            <div class="a">
+                <input type="button" onclick="document.getElementById('mp').value=mp.value+'0'" value="0" onmouseup="document.getElementById('pm').value='='+eval(mp.value+'0')">
+                <input type="button"   onclick="document.getElementById('mp').value=mp.value+'00'" value="00" onmouseup="document.getElementById('pm').value='='+eval(mp.value+'00')">
+                <input type="button"  onclick="document.getElementById('mp').value=mp.value+'**'" value="^"  onmouseup="document.getElementById('pm').value='='+eval(mp.value)">
+                
+                <input type="button"  onclick="fun(mp.value)" value="=" style="background-color:orange;color:white ">
+                
+               
+            </div>
+         
+           
+         </div>
+   </center>
+    </body>
+</html>

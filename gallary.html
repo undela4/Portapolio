@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="icon" href="undela.jpg" >
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallary</title>
+    <style>
+    .cardd{
+        display: flex;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        grid-column:auto;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.card:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transform: scale(1.1); 
+    transition:1s;
+    box-shadow: 0 0 11px rgb(120, 225, 239);
+    
+}
+.bg{
+    background-color:rgb(116, 236, 134);
+    font-style:bold;
+}
+body{
+    background-color:antiquewhite;
+}
+    </style>
+</head>
+<body >
+  <script>
+    AOS.init();
+
+  </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg ">
+        <a class="navbar-brand" href="#">UNDELA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallary.html">Gallary</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="">Clone Sites</a>
+                  <a class="dropdown-item" href="./MICRO PROJECT/logintom.html">Mobile Store</a> 
+                  <a class="dropdown-item" href="clock.html">Stop Watch</a>
+                  <a class="dropdown-item" href="cal2.html">Calculator</a>
+                  <a class="dropdown-item" href="pro.html">AWS</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">😊Be Happy😊</a>
+                </div>
+              </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="pro.html">Education</a>
+                  </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Achiments
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="pro.html">❤️LOVE</a>
+                <a class="dropdown-item" href="pro.html">🤷‍♂️ FRIENDS</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pro.html">😊FEEL</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="pro.html">Other</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+
+    <div class="cardd" >
+    <div class="card 1" style="width: 18rem;" >
+        <img class="card-img-top p" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card 2" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+      <div class="card 3" style="width: 18rem;">
+        <img class="card-img-top" src="murali.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+        </div>
+      </div>
+    </div>
+</body>
+</html>

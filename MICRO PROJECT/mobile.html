@@ -1,0 +1,316 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            Mobile Store's
+        </title>
+        <style>
+            body{
+                padding:20px;
+                font-family: 'Times New Roman', Times, serif;
+                
+
+            }
+        .card{
+                
+                transition: 0.3s;
+                width: 300px;
+                height: 482px;
+                float: left;
+                margin: 25px;
+                border-radius:20px;
+                border: 2px solid pink;
+
+            }
+            .br{
+                
+                transition: 0.3s;
+                width: 200px;
+                height:220px;
+                float: left;
+                margin: 40px;
+                padding: 30px;
+                border-radius:20px;
+                border: 2px solid pink;
+
+            }
+            .m{
+                text-align: center;
+            }
+            .card:hover{
+                box-shadow: 0 4px 8px 0px black;
+            }
+            .card .text  img{
+                width: 200px;
+                height: 220px;
+                padding: 35px 50px 0px;
+                background: transparent;
+                border-radius:20px ;
+
+            }
+            .br img{
+                width: 200px;
+                height: 220px;
+                padding:0px ;
+                border-radius:20px ;
+            }
+            .text p{
+                font-family:'Times New Roman', Times, serif;
+                font-size: 20px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .bt{
+                height: 35px;
+                width: 190px;
+                margin:0px 0px 10px 50px ;
+                cursor: pointer;
+                border-radius: 10px;
+                text-align:center;
+                color:black;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 20px;
+            }
+            
+        
+            .mq{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 30px;
+                background-color: antiquewhite;
+                border-radius: 20px;
+
+            }
+            .mq:first-letter{
+                    font-size: 50px;
+                    color:rgb(233, 36, 26);
+
+            }
+            .dark{
+                background-color: black;
+                color:white;
+
+
+            }
+            .dr{
+                top:10%;
+               position: -webkit-sticky;
+               position: sticky;
+               background: transparent;
+               
+            }
+            .dr img{
+                width:70px;
+                height: 40px;
+                object-fit: contain;                
+                background: transparent;
+                mix-blend-mode:darken;
+
+            }
+            .dr sbutton{
+                border:none;
+                margin-bottom: 10px;
+                border-radius: 0px 30px 30px 0px ;
+                border: 1px solid black;
+        }
+        .web {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0%;
+            text-align: center;
+            border-radius:10px;
+            background-color: aliceblue;
+           
+        }
+        .random  {
+            display: flex;
+            justify-content: flex-end;
+          }
+          .random button{
+            border-radius: 5px 0px 30px 0px;
+            background-color:#ffd11a;
+            width: max-content;
+            height: auto;
+
+
+
+          }
+       
+        </style>
+    </head>
+    <body >
+        <script>
+           
+            function random(){
+                
+                var rc = Math.floor(Math.random()*16777215).toString(16);
+                rc="#"+rc;
+                document.body.style.backgroundColor=rc;
+
+            }
+        
+            var c=0;
+            function tc(){
+                var p=document.body;
+                p.classList.toggle('dark');
+                document.getElementById('123').style.color='red';
+
+                
+
+            }
+            function bc(){
+                if(c==0){
+                    document.getElementById('id').src="d.jpg";
+                    c=1;
+                }
+                else{
+                    document.getElementById('id').src="l.jpg";
+                    c=0;
+                }
+
+            }
+        </script>
+        <div class="web">
+   
+            <h1>
+                <span style="color: red;">MOBILE</span>
+                <span style="color: yellowgreen;">STORES</span>
+            </h1>
+            <h2>Welcome to our Store's</h2>
+            <marquee class="mq" id="123">Offer Closes Soon.........</marquee>   
+
+            
+        </div>
+            <div class="dr">
+        <button onclick="tc()" ><img  id="id" src="l.jpg" onclick="bc()"></button>
+        </div>
+        <div class="random">
+        <button onmouseover="random()" >Colour change</button>
+
+        </div>
+
+            <div class="card">
+                <div class="text">
+                <img src="https://m.media-amazon.com/images/I/716uVx3Wr5L._AC_UL480_QL65_.jpg" >
+                <p><b>  OnePlue  10R  5G </b><br>(Forest Green,8GB Ram,Storage)
+                    ₹34,999 &nbsp;<del>(₹45,999.00)</del>
+                     </p> 
+    
+                </div>
+                <button class="bt" style="background:#ffd11a"> Add to Cart</button><br>
+                <button class="bt" style="background:#ff9900"> Buy Now</button>
+    
+            </div>
+            <div class="card">
+                <div class="text">
+                <img src="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_UL480_FMwebp_QL65_.jpg" >
+                <p><b>Apple iPhone 14 Pro</b><br>( 128 GB, 12GB RAM ,Gold)
+                    ₹1,29,900 
+                     </p> 
+                </div>
+                <button class="bt" style="background:#ffd11a"> Add to Cart</button><br>
+                <button class="bt" style="background:#ff9900"> Buy Now</button>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <img src="https://m.media-amazon.com/images/I/51nkYSSgwZL._AC_UY327_FMwebp_QL65_.jpg" >
+                    <p><b>Samsung Galaxy Z Fold 4 5G </b><br>(Beige,12GB RAM 1TB Storage)
+                    ₹1,65,000 &nbsp;<del>(₹2,07,999)</del>
+                     </p> 
+                </div>
+                <button class="bt" style="background:#ffd11a"> Add to Cart</button><br>
+                <button class="bt" style="background:#ff9900"> Buy Now</button>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <img src="https://m.media-amazon.com/images/I/31rx3zPdZ1L._AC_UY327_FMwebp_QL65_.jpg" >
+                    <p><b>Vivo V23 Pro 5G </b><br>(Sunshine Gold,12GB RAM ,256GB Storag)
+                        ₹43,989&nbsp;<del>(₹45,999.00)</del>
+                         </p> 
+                </div>
+                <button class="bt" style="background:#ffd11a"> Add to Cart</button><br>
+                <button class="bt" style="background:#ff9900"> Buy Now</button>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <img src="https://dlcdnwebimgs.asus.com/gain/3C7AF950-F88D-40D8-93FE-B49C4F26EAA2/w300" >
+                    <p><b>Rog Phone 5s</b><br>( Black,8GB RAM,128GB Storage)
+                        ₹49,999 &nbsp;<del>(₹60,999.00)</del>
+                         </p> 
+                </div>
+                <button class="bt" style="background:#ffd11a"> Add to Cart</button><br>
+                <button class="bt" style="background:#ff9900"> Buy Now</button>
+            </div>
+            <div class="card">
+                <div class="text">
+                  <img src="https://m.media-amazon.com/images/I/41IUjZ1gjcL._AC_UL480_FMwebp_QL65_.jpg" >
+                  <p><b>Nothing Phone(1) 5G </b><br>(White,256GB Storage,8GB RAM)
+                    ₹32,800 &nbsp;<del>(₹39,990.00)</del>
+                     </p> 
+                </div>
+                <button class="bt" style="background:#ffd11a"> Add to Cart</button><br>
+                <button class="bt" style="background:#ff9900"> Buy Now</button>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <img src="https://m.media-amazon.com/images/I/6157kr+aeaL._AC_UY327_FMwebp_QL65_.jpg" >
+                    <p><b>iQOO 9T 5G </b><br>(Legend,8GB RAM,128GB Storage)
+                        ₹49,999 &nbsp;<del>(₹54,999.00)</del>
+                         </p> 
+                </div>
+                <button class="bt" style="background:#ffd11a"> Add to Cart</button><br>
+                <button class="bt" style="background:#ff9900"> Buy Now</button>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <img src="https://m.media-amazon.com/images/I/51M0gplIVFL._AC_UY327_FMwebp_QL65_.jpg" >
+                    <p><b>Huawei P50 Pro 4G</b><br>(Cocoa Gold,8GB RAM,256GB Storage)
+                        ₹61,999 &nbsp;<del>(₹99,999.00)</del>
+                         </p> 
+                </div>
+                <button class="bt" style="background:#ffd11a"> Add to Cart</button><br>
+                <button class="bt" style="background:#ff9900"> Buy Now</button>
+            </div>
+        
+
+        <h1 style=" text-align:center"> Other Popular Brands</h1>
+            <div class="br">
+                <div class="">
+               <a href="iqoo.html" target="_blank"> <img src="https://m.media-amazon.com/images/G/31/img22/Wireless/simonti/CATpage/BrandSprite/BAU/3Brand-farm3._CB605997472_.jpg" ></a>
+                    
+                </div>
+            
+            </div>
+                <div class="br">
+                    <div class="">
+            <a href="one+.html" target="new" ></a><img src="https://m.media-amazon.com/images/G/31/img22/Wireless/simonti/CATpage/BrandSprite/BAU/1_Brand-farm._CB605997472_" ></a>
+                        
+                    </div>
+                </div>
+                
+                 <div class="br">
+                        <div class="">
+              <a  href="apple.html" target="_blank" ><img src="https://m.media-amazon.com/images/G/31/img22/Wireless/simonti/CATpage/BrandSprite/BAU/apple_Brand-farm3._CB606010784_.jpg" ></a>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="br">
+                        <div class="">
+                    <img src="https://m.media-amazon.com/images/G/31/img22/Wireless/simonti/CATpage/BrandSprite/BAU/oppo_Brand-farm2._CB606010784_.jpg" >
+            </div>
+            </div>
+                    
+            <br>
+            <br>
+        <h1 style="font-size: 30px;text-align :center;">@Copy Right 2022-2023<br>
+                All rights reserved<br>
+            Developed by CSE Student</h1> 
+    
+    
+        </body>
+    </html>
+    
+
+    </body>
+</html>
